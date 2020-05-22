@@ -60,7 +60,7 @@ myWorkspaces    = ["1","2","3","4","5","6","7","8","9"]
 
 myManageHook = composeAll
     [ className =? "MPlayer"        --> doFloat
-    , className =? "Gimp"           --> doFloat
+    , className =? "virt-manager"           --> doFloat
     , resource  =? "desktop_window" --> doIgnore
     , resource  =? "kdesktop"       --> doIgnore ]
     <+> manageDocks
@@ -165,6 +165,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm .|. shiftMask, xK_slash ), spawn ("echo \"" ++ help ++ "\" | xmessage -file -"))
     ]
     ++
+
 
     --
     -- mod-[1..9], Switch to workspace N
