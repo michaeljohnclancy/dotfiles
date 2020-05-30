@@ -45,9 +45,9 @@ set ignorecase                            " Ignores the case when searching text
 set smartcase                             " But if search contains uppercase, will not be ignored.
 set noswapfile                            " No temp file created when editing.
 set nobackup                              " No need for regular backup.
+set nowritebackup
 set undodir=$XDG_DATA_HOME/nvim/undodir   " Directory to store backup.
 set undofile                              " 1 file per file open in vim stored in undodir.
-
 
 " Visual
 set termguicolors       " Enables true color of terminal.
