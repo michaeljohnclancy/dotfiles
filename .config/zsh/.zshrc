@@ -56,8 +56,9 @@ zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"  # Tab completed files 
 zstyle ':completion:*' verbose false                      # Turns off descriptions for tab completion entries.
 
 # Turn on all the completion stuff
-autoload -Uz compinit && compinit
+autoload -Uz compinit && compinit -d $ZSH_COMPDUMP 
 autoload -Uz promptinit && promptinit
 autoload -Uz zmv
 
-compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-$ZSH_VERSION # Sets the location of the Oh-My-Zsh autocompletion cache.
+# Virtualenvwrapper source
+source /usr/bin/virtualenvwrapper_lazy.sh

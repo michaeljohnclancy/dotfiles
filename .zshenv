@@ -21,12 +21,15 @@ export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 export XMONAD_DATA_HOME="$XDG_DATA_HOME"/xmonad
 export ZSH="$XDG_DATA_HOME"/zsh/oh_my_zsh
 export STACK_ROOT="$XDG_DATA_HOME"/stack
+export PYENV_ROOT="$XDG_DATA_HOME"/pyenv
+export WORKON_HOME="$XDG_DATA_HOME"/virtualenvs
 
 # XDG CACHE
 export XDG_CACHE_HOME="$HOME"/.cache
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
 export XMONAD_CACHE_HOME="$XDG_CACHE_HOME"/xmonad
 export PYLINTHOME="$XDG_CACHE_HOME"/pylint
+export ZSH_COMPDUMP="$XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION" # Sets the location of the Oh-My-Zsh autocompletion cache.
 
 ##################################
 
