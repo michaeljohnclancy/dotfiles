@@ -65,7 +65,6 @@ nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 
 " Coc config
-" source $XDG_CONFIG_HOME/nvim/MinimalCocConfig.vim
 source $XDG_CONFIG_HOME/nvim/CocConfig.vim
 
 " fzf config
