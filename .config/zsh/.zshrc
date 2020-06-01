@@ -1,3 +1,5 @@
+# rm check alias
+alias rm='rm -i'
 
 #XDG aliases
 alias xbindkeys="xbindkeys -f $XDG_CONFIG_HOME/xbindkeys/config"
@@ -11,6 +13,8 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS+=(main brackets) # Adds highlighting when parentheses
 
 DISABLE_AUTO_UPDATE="true"   # Disable autoupdate.
 export CASE_SENSITIVE="true" # Makes autocomplete case sensitive.
+
+source $ZSH/oh-my-zsh.sh
 
 HISTFILE="$XDG_DATA_HOME"/zsh/history
 HISTSIZE=1000
@@ -44,7 +48,7 @@ bindkey -M vicmd 'k' history-beginning-search-backward
 bindkey -M vicmd 'j' history-beginning-search-forward
 
 # ZSH Styling
-zstyle :compinstall filename $HOME/.zshrc
+zstyle :compinstall filename "XDG_CONFIG_HOME"/zsh/.zshrc
 
 zstyle ':completion:*:*:*:*:*' menu ''                    # Emulates Vim menu completion.
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={a-zA-Z}' # Combats Oh-My-Zsh fuzzy tab completion.
@@ -57,4 +61,3 @@ autoload -Uz promptinit && promptinit
 autoload -Uz zmv
 
 compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-$ZSH_VERSION # Sets the location of the Oh-My-Zsh autocompletion cache.
-
