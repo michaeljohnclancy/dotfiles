@@ -1,0 +1,35 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 22e92e392d203fb13cefd86139813edc5d2aa683b1ed45b916d625fb0c727fb3
+
+name:           xmonad-michaeljohnclancy
+version:        0.1.0
+synopsis:       xmonad setting
+homepage:       https://github.com/michaeljohnclancy/xmonad#readme
+bug-reports:    https://github.com/michaeljohnclancy/xmonad/issues
+author:         michaeljohnclancy
+maintainer:     s1623705@sms.ed.ac.uk
+copyright:      © michaeljohnclancy
+license:        MIT
+build-type:     Simple
+
+source-repository head
+  type: git
+  location: https://github.com/michaeljohnclancy/xmonad
+
+executable xmonad
+  main-is: xmonad.hs
+  other-modules:
+      Paths_xmonad_michaeljohnclancy
+  ghc-options: -Wall -fwarn-tabs -threaded -O2 -with-rtsopts=-N4
+  build-depends:
+      X11
+    , base
+    , containers
+    , xmonad
+    , xmonad-contrib
+  default-language: Haskell2010
