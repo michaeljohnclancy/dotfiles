@@ -4,6 +4,7 @@ alias rm='rm -i'
 #XDG aliases
 alias xbindkeys="xbindkeys -f $XDG_CONFIG_HOME/xbindkeys/config"
 alias nvidia-settings="nvidia-settings --config=$XDG_CONFIG_HOME/nvidia/settings"
+alias hoogle="hoogle --database $XDG_DATA_HOME/hoogle/default-haskell.hoo"
 
 ###################################
 ############ ZSH CONFIG ###########
@@ -60,5 +61,7 @@ autoload -Uz compinit && compinit -d $ZSH_COMPDUMP
 autoload -Uz promptinit && promptinit
 autoload -Uz zmv
 
-# Virtualenvwrapper source
-source /usr/bin/virtualenvwrapper_lazy.sh
+# Initialises pyenv
+eval "$(pyenv init -)"
+# Automatically activates relevent python virtualenv when entering/leaving directories.
+eval "$(pyenv virtualenv-init -)"
